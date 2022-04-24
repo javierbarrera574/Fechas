@@ -30,7 +30,6 @@ namespace Fechas
         private void InitializeComponent()
         {
             this.txtDia = new System.Windows.Forms.TextBox();
-            this.lblResultado = new System.Windows.Forms.Label();
             this.btSiguiente = new System.Windows.Forms.Button();
             this.txtMes = new System.Windows.Forms.TextBox();
             this.txtAño = new System.Windows.Forms.TextBox();
@@ -39,6 +38,9 @@ namespace Fechas
             this.lblAño = new System.Windows.Forms.Label();
             this.btLimpiar = new System.Windows.Forms.Button();
             this.btCerrar = new System.Windows.Forms.Button();
+            this.lblDias = new System.Windows.Forms.Label();
+            this.lblMeses = new System.Windows.Forms.Label();
+            this.lblAños = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDia
@@ -48,16 +50,6 @@ namespace Fechas
             this.txtDia.Name = "txtDia";
             this.txtDia.Size = new System.Drawing.Size(138, 29);
             this.txtDia.TabIndex = 0;
-            this.txtDia.TextChanged += new System.EventHandler(this.txtDia_TextChanged);
-            // 
-            // lblResultado
-            // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(295, 338);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(0, 20);
-            this.lblResultado.TabIndex = 1;
             // 
             // btSiguiente
             // 
@@ -77,7 +69,7 @@ namespace Fechas
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(138, 29);
             this.txtMes.TabIndex = 3;
-            this.txtMes.TextChanged += new System.EventHandler(this.txtMes_TextChanged);
+            
             // 
             // txtAño
             // 
@@ -86,7 +78,6 @@ namespace Fechas
             this.txtAño.Name = "txtAño";
             this.txtAño.Size = new System.Drawing.Size(138, 29);
             this.txtAño.TabIndex = 4;
-            this.txtAño.TextChanged += new System.EventHandler(this.txtAño_TextChanged);
             // 
             // lblDia
             // 
@@ -140,11 +131,41 @@ namespace Fechas
             this.btCerrar.UseVisualStyleBackColor = true;
             this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
+            // lblDias
+            // 
+            this.lblDias.AutoSize = true;
+            this.lblDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDias.Location = new System.Drawing.Point(121, 428);
+            this.lblDias.Name = "lblDias";
+            this.lblDias.Size = new System.Drawing.Size(0, 20);
+            this.lblDias.TabIndex = 11;
+            // 
+            // lblMeses
+            // 
+            this.lblMeses.AutoSize = true;
+            this.lblMeses.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMeses.Location = new System.Drawing.Point(204, 428);
+            this.lblMeses.Name = "lblMeses";
+            this.lblMeses.Size = new System.Drawing.Size(0, 20);
+            this.lblMeses.TabIndex = 12;
+            // 
+            // lblAños
+            // 
+            this.lblAños.AutoSize = true;
+            this.lblAños.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAños.Location = new System.Drawing.Point(354, 427);
+            this.lblAños.Name = "lblAños";
+            this.lblAños.Size = new System.Drawing.Size(0, 20);
+            this.lblAños.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.lblAños);
+            this.Controls.Add(this.lblMeses);
+            this.Controls.Add(this.lblDias);
             this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.btLimpiar);
             this.Controls.Add(this.lblAño);
@@ -153,7 +174,6 @@ namespace Fechas
             this.Controls.Add(this.txtAño);
             this.Controls.Add(this.txtMes);
             this.Controls.Add(this.btSiguiente);
-            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtDia);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -165,7 +185,6 @@ namespace Fechas
         #endregion
 
         private System.Windows.Forms.TextBox txtDia;
-        private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btSiguiente;
         private System.Windows.Forms.TextBox txtMes;
         private System.Windows.Forms.TextBox txtAño;
@@ -174,6 +193,9 @@ namespace Fechas
         private System.Windows.Forms.Label lblAño;
         private System.Windows.Forms.Button btLimpiar;
         private System.Windows.Forms.Button btCerrar;
+        private System.Windows.Forms.Label lblDias;
+        private System.Windows.Forms.Label lblMeses;
+        private System.Windows.Forms.Label lblAños;
     }
 }
 

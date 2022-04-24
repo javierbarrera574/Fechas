@@ -35,13 +35,15 @@ namespace Fechas
 
             if (dias>=1 && dias<=31)
             {
-                lblResultado.Text = "";
+                lblDias.Text = Convert.ToString(dias); 
             }
             else
             {
 
                 MessageBox.Show("ingrese un dia valido dentro del rango establecido");
-                lblResultado.Text = null;
+                lblDias.Text = null;
+                lblMeses.Text = null;
+                lblAños.Text = null;
             }
 
 
@@ -50,16 +52,18 @@ namespace Fechas
 
                 if (meses == 2 && dias<=28)
 
-                    lblResultado.Text = "febrero";
+                    lblMeses.Text = " de " + "febrero";
                 else
                 {
                     if (año % 4 == 0 && año % 100 != 0 || año % 400 == 0)
                     {
-                        lblResultado.Text = "febrero";
+                        lblMeses.Text = " de " + "febrero";
                     }
                     else
                     {
-                        lblResultado.Text = null;
+                        lblDias.Text = null;
+                        lblMeses.Text = null;
+                        lblAños.Text = null;
                         txtDia.Text = null;
                         txtMes.Text = null;
                         txtAño.Text = null;
@@ -71,17 +75,19 @@ namespace Fechas
 
                 if (meses == 3)
 
-                    lblResultado.Text = "marzo";
+                    lblMeses.Text = " de " + "marzo";
 
                 if (meses == 4)
 
                     if (dias<=30)
                     {
-                        lblResultado.Text = "abril";
+                        lblMeses.Text = " de " + "abril";
                     }
                     else
                     {
-                        lblResultado.Text = null;
+                        lblDias.Text = null;
+                        lblMeses.Text = null;
+                        lblAños.Text = null;
                         txtDia.Text = null;
                         txtMes.Text = null;
                         txtAño.Text = null;
@@ -92,17 +98,19 @@ namespace Fechas
 
                 if (meses == 5)
 
-                    lblResultado.Text = "mayo";
+                    lblMeses.Text = " de " + "mayo";
 
                 if (meses == 6)
 
                     if (dias<=30)
                     {
-                        lblResultado.Text = "junio";
+                        lblMeses.Text = " de " + "junio";
                     }
                     else
                     {
-                        lblResultado.Text = null;
+                        lblDias.Text = null;
+                        lblMeses.Text = null;
+                        lblAños.Text = null;
                         txtDia.Text = null;
                         txtMes.Text = null;
                         txtAño.Text = null;
@@ -112,21 +120,23 @@ namespace Fechas
 
                 if (meses == 7)
 
-                    lblResultado.Text = "julio";
+                    lblMeses.Text = " de " + "julio";
 
                 if (meses == 8)
 
-                    lblResultado.Text = "agosto";
+                    lblMeses.Text = " de " + "agosto";
 
                 if (meses == 9)
 
                     if (dias<=30)
                     {
-                        lblResultado.Text = "septiembre"; 
+                        lblMeses.Text = " de " + "septiembre"; 
                     }
                     else
                     {
-                        lblResultado.Text = null;
+                        lblDias.Text = null;
+                        lblMeses.Text = null;
+                        lblAños.Text = null;
                         txtDia.Text = null;
                         txtMes.Text = null;
                         txtAño.Text = null;
@@ -135,18 +145,20 @@ namespace Fechas
 
                 if (meses == 10)
 
-                    lblResultado.Text = "octubre";
+                    lblMeses.Text = " de " + "octubre";
 
                 if (meses == 11)
 
                     if (dias<=30)
                     {
-                        lblResultado.Text = "noviembre"; 
+                        lblMeses.Text = " de " + "noviembre"; 
                     }
 
                     else
                     {
-                        lblResultado.Text = null;
+                        lblDias.Text = null;
+                        lblMeses.Text = null;
+                        lblAños.Text = null;
                         txtDia.Text = null;
                         txtMes.Text = null;
                         txtAño.Text = null;
@@ -155,11 +167,11 @@ namespace Fechas
 
                 if (meses == 12)
 
-                    lblResultado.Text = "diciembre";
+                    lblMeses.Text = " de " + "diciembre";
 
                 if (meses==1)
                 {
-                    lblResultado.Text = "enero";
+                    lblMeses.Text = " de " + "enero";
                 }
 
                
@@ -169,30 +181,29 @@ namespace Fechas
             {
 
                 MessageBox.Show("ingrese un mes valido");
-                lblResultado.Text = null;
+                lblMeses.Text = null;
 
             }
 
-            lblResultado.Text = Convert.ToString(dias+1 + " de " +  lblResultado.Text + " de " + año);
+
+            do
+            {
+
+                lblAños.Text = Convert.ToString(" de " + año);
+
+
+            } while (año<=2022);
+
+            if (año>2022)
+            {
+
+                MessageBox.Show("ingrese un año valido");
+
+            }
+
+             
         }
-
-         
-
-        private void txtMes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDia_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAño_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+  
         private void btLimpiar_Click(object sender, EventArgs e)
         {
 
@@ -202,16 +213,11 @@ namespace Fechas
 
             txtAño.Text = null;
 
-            lblResultado.Text = null;
+            lblDias.Text = null;
 
+            lblMeses.Text = null;
 
-
-        }
-
-        private void btActual_Click(object sender, EventArgs e)
-        {
-
-          
+            lblAños.Text = null;
 
         }
 
