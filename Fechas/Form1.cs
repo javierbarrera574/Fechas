@@ -35,7 +35,7 @@ namespace Fechas
 
             if (dias>=1 && dias<=31)
             {
-                lblDias.Text = Convert.ToString(dias); 
+                lblDias.Text = Convert.ToString(dias+1); 
             }
             else
             {
@@ -192,16 +192,17 @@ namespace Fechas
                 lblAños.Text = Convert.ToString(" de " + año);
 
 
-            } while (año<=2022);
+                if (año > 2022)
+                {
 
-            if (año>2022)
-            {
+                    MessageBox.Show("ingrese un año valido");
 
-                MessageBox.Show("ingrese un año valido");
+                }
 
-            }
 
-             
+            } while (año>=1200 && año<=2022);
+
+            MessageBox.Show("El año debe estar establecido entre lo declarado"); 
         }
   
         private void btLimpiar_Click(object sender, EventArgs e)
