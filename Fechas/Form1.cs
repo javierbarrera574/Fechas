@@ -57,11 +57,11 @@ namespace Fechas
 
             año = int.Parse(txtAño.Text);
 
-            if (dias>=1 && dias<=31)
+            if (dias >= 1 && dias <= 31)
             {
 
-               
-                lblDias.Text = Convert.ToString(dias+1); 
+
+                lblDias.Text = Convert.ToString(dias + 1);
             }
 
             //else
@@ -74,7 +74,7 @@ namespace Fechas
             //}
 
 
-            if (meses >0 && meses <= 12)
+            if (meses > 0 && meses <= 12)
             {
 
                 if (meses == 2 && dias <= 28)
@@ -82,16 +82,16 @@ namespace Fechas
                 {
 
 
-                    if (dias==28)
+                    if (dias == 28)
                     {
                         mes2 = meses + 1;
                         mes2 = mes3;
 
-                        if (meses==3)
+                        if (meses == 3)
                         {
 
                             dias = 1;
-                            
+
 
 
 
@@ -99,7 +99,7 @@ namespace Fechas
 
                     }
 
-                    
+
 
 
                     lblMeses.Text = " de " + "febrero";
@@ -113,7 +113,7 @@ namespace Fechas
                     if (año % 4 == 0 && año % 100 != 0 || año % 400 == 0)
                     {
 
-                        if (dias==29)
+                        if (dias == 29)
                         {
                             mes2 = meses + 1;
                             mes2 = mes3;
@@ -123,7 +123,7 @@ namespace Fechas
                             //int diasiguiente = dias;
 
 
-                            if (mes3==3)
+                            if (mes3 == 3)
                             {
                                 dias = 1;
                             }
@@ -139,35 +139,35 @@ namespace Fechas
 
                 {
 
-                    if (dias==31)
+                    if (dias == 31)
                     {
                         mes3 = meses + 1;
 
                         mes3 = mes4;
 
-                        if (mes4==4)
+                        if (mes4 == 4)
                         {
                             dias = 1;
                         }
                     }
-                    
-                    lblMeses.Text = " de " + "marzo"; 
-                
-                
+
+                    lblMeses.Text = " de " + "marzo";
+
+
                 }
 
                 if (meses == 4)
 
-                    if (dias<=30)
+                    if (dias <= 30)
                     {
 
-                        if (dias==30)
+                        if (dias == 30)
                         {
                             mes4 = meses + 1;
 
                             mes4 = mes5;
 
-                            if (mes5==1)
+                            if (mes5 == 1)
                             {
                                 dias = 1;
                             }
@@ -178,24 +178,41 @@ namespace Fechas
 
                         lblMeses.Text = " de " + "abril";
                     }
-                    
+
 
                 if (meses == 5)
 
+                {
+                    if (dias == 31)
+                    {
+                        mes5 = meses + 1;
+                        mes5 = mes6;
+
+                        if (mes6 == 6)
+                        {
+                            dias = 1;
+                        }
+
+                    }
+
+
                     lblMeses.Text = " de " + "mayo";
+
+
+                }
 
                 if (meses == 6)
 
-                    if (dias<=30)
+                    if (dias <= 30)
                     {
 
-                        if (dias==30)
+                        if (dias == 30)
                         {
-                            mes7 = meses + 1;
+                            mes6 = meses + 1;
 
-                            mes7 = mes8;
+                            mes6 = mes7;
 
-                            if (mes7==7)
+                            if (mes7 == 7)
                             {
                                 dias = 1;
                             }
@@ -212,10 +229,10 @@ namespace Fechas
 
                     if (dias == 31)
                     {
-                        
-                        
 
-                        int mes7 = meses+1;
+
+
+                        int mes7 = meses + 1;
 
                         mes7 = mes8;
 
@@ -227,17 +244,38 @@ namespace Fechas
                     }
 
 
-                    lblMeses.Text = " de " + "julio"; 
-                
+                    lblMeses.Text = " de " + "julio";
+
                 }
 
                 if (meses == 8)
 
+                {
+
+                    if (dias == 31)
+                    {
+
+                        mes8 = meses + 1;
+                        mes8 = mes9;
+
+                        if (mes9 == 9)
+                        {
+
+                            dias = 1;
+
+                        }
+
+                    }
+
+
                     lblMeses.Text = " de " + "agosto";
+
+
+                }
 
                 if (meses == 9)
 
-                    if (dias<=30)
+                    if (dias <= 30)
                     {
 
 
@@ -251,31 +289,47 @@ namespace Fechas
                             }
 
                         }
-                        lblMeses.Text = " de " + "septiembre"; 
+                        lblMeses.Text = " de " + "septiembre";
                     }
-                 
+
                 if (meses == 10)
 
+                {
+
+                    if (dias == 31)
+                    {
+                        mes10 = meses + 1;
+
+                        mes10 = mes11;
+
+                        if (mes11 == 11)
+                        {
+                            dias = 1;
+                        }
+                    }
+
+
                     lblMeses.Text = " de " + "octubre";
+                }
 
                 if (meses == 11)
 
-                    if (dias<=30)
+                    if (dias <= 30)
                     {
 
-                        if (dias==30)
+                        if (dias == 30)
                         {
-                            mes11 = meses +1;
+                            mes11 = meses + 1;
                             mes11 = mes12;
 
-                            if (mes12==12)
+                            if (mes12 == 12)
                             {
                                 dias = 1;
                             }
 
                         }
 
-                        lblMeses.Text = " de " + "noviembre"; 
+                        lblMeses.Text = " de " + "noviembre";
                     }
 
 
@@ -285,12 +339,12 @@ namespace Fechas
 
                 {
 
-                    if (dias==31)
+                    if (dias == 31)
                     {
-                        mes12 = meses + 1;
+                        mes1 = 1;
                         mes12 = mes1;
 
-                        if (mes1==1)
+                        if (mes1 == 1)
                         {
                             dias = 1;
                         }
@@ -301,47 +355,33 @@ namespace Fechas
 
                 }
 
-                if (meses==1)
+                if (meses == 1)
                 {
-                    if (dias==31)
+                    if (dias == 31)
                     {
-                        int mes2 = meses + 1;//aca en teoria se tendria que incrementar el mes
+                        mes1 = meses + 1;//aca en teoria se tendria que incrementar el mes
 
 
+                        mes1 = mes2;
 
+                        if (mes2 == 2)
+                        {
+                            dias = 1;
+                        }
                     }
                     lblMeses.Text = " de " + "enero";
                 }
 
-               
+
 
             }
             else
             {
 
                 MessageBox.Show("ingrese un mes valido");
-                lblMeses.Text = null;
+
 
             }
-
-
-            do
-            {
-
-                lblAños.Text = Convert.ToString(" de " + año);
-
-
-                if (año > 2022)
-                {
-
-                    MessageBox.Show("ingrese un año valido");
-
-                }
-
-
-            } while (año>=1200 && año<=2022);
-
-            MessageBox.Show("El año debe estar establecido entre lo declarado"); 
         }
   
         private void btLimpiar_Click(object sender, EventArgs e)
@@ -370,13 +410,11 @@ namespace Fechas
      
     }
 
-
-
-
    
 
 }
 
 
 
-///PROBAR SI ESTA MIERDA FUNCIONA EN ALGUN MOMENTO
+///PROBAR SI ESTA MIERDA FUNCIONA EN ALGUN MOMENTO, QUE OBVIAMENTE NO VA A FUNCIONAR, PERO
+///BUENO, HAY QUE MEJORARLO UN POCO EN CUESTION DEL DISEÑO Y LA ESTRUCTURA LOGICA
